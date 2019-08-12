@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`
+    title: `Rosa B&B`,
+    description: `Rosa Bed & Breakfast, Oudtshoorn, South Africa`,
+    author: `@simeydeklerk`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `Rosa B&B`,
+        short_name: `rosabnb`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4dc0b5`,

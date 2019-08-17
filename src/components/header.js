@@ -38,7 +38,7 @@ function Header({ siteTitle }) {
             isExpanded ? `block` : `hidden`
             } md:block md:flex md:items-center w-full md:w-auto`}
         >
-          <div className="text-sm">
+          <div className="text-sm uppercase font-bold">
             <NavItem label="Home" href="/" />
             <NavItem label="About" href="/#about" />
             <NavItem label="Rooms" href="/#rooms" />

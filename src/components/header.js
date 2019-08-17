@@ -1,16 +1,16 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <nav className="bg-teal-700 relative">
+    <nav className="bg-black relative">
       <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-2 md:p-4">
         <Link to="/" className="flex items-center no-underline text-white">
-          <Img
+          <img
             src='/images/rosa-logo.png' 
             alt="Rosa B&B Logo" 
             className="bg-white"

@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import { Logo } from "./Logo";
+
 // import Img from "gatsby-image";
 
 function Header({ siteTitle }) {
@@ -9,15 +11,6 @@ function Header({ siteTitle }) {
   return (
     <nav className="bg-black relative">
       <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-2 md:p-4">
-        <Link to="/" className="flex items-center no-underline text-white">
-          <img
-            src='/images/rosa-logo.png' 
-            alt="Rosa B&B Logo" 
-            className="bg-white"
-            style={{width:'200px', position:"absolute", top: "10px"}}
-            />
-          {/* <h1 className="font-bold text-xl tracking-tight">Rosa B&B</h1> */}
-        </Link>
 
         <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
@@ -54,7 +47,7 @@ function Header({ siteTitle }) {
   );
 }
 
-function NavItem({ label, href, className}) {
+function NavItem({ label, href, className }) {
   return (
     <Link
       to={href}

@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import Img from "gatsby-image";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -9,8 +10,8 @@ function Header({ siteTitle }) {
     <nav className="bg-teal-700 relative">
       <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-2 md:p-4">
         <Link to="/" className="flex items-center no-underline text-white">
-          <img
-            src='https://static.wixstatic.com/media/84803a_048a1807f9a54346a31824a6217c45c3~mv2_d_3508_2480_s_4_2.png/v1/fill/w_900,h_638,al_c,q_85,usm_0.66_1.00_0.01/84803a_048a1807f9a54346a31824a6217c45c3~mv2_d_3508_2480_s_4_2.webp' 
+          <Img
+            src='/images/rosa-logo.png' 
             alt="Rosa B&B Logo" 
             className="bg-white"
             style={{width:'200px', position:"absolute", top: "10px"}}

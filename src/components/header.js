@@ -10,7 +10,7 @@ function Header({ siteTitle }) {
 
   return (
     <nav className="bg-black relative">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-2 md:p-4">
+      <div className="flex flex-wrap items-spread justify-between max-w-4xl mx-auto p-2 md:p-4">
 
         <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
@@ -29,7 +29,7 @@ function Header({ siteTitle }) {
         <div
           className={`${
             isExpanded ? `block` : `hidden`
-            } md:block md:flex md:items-center w-full md:w-auto`}
+            } md:block flex md:items-center w-full justify-between`}
         >
           <div className="text-sm uppercase font-bold">
             <NavItem label="Home" href="/" />

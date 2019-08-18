@@ -22,30 +22,31 @@ function HeroImg() {
   //   backgroundImage: src,
   //   height
   // }
-  const style = { 
+  const style = {
     position: 'relative',
-    height: "25rem", 
-    background: `url(${src}) 50% fixed / cover`,
-    // backgroundAttachment: 'fixed',
-    // backgroundSize: 'cover', 
-    backgroundPosition: `center center`,   
+    height: "28rem",
+    background: `url(${src})`,
+    backgroundAttachment: 'fixed',
+    backgroundSize: "80%", 
+    backgroundPosition: `center top`,
+    marginLeft: `auto`,
+    marginRight: `auto`,
   }
   return (
-    <div className="max-w-4xl mx-auto" style={{position:'relative'}}>
-      <div className="max-w-4xl mx-auto bg-fixed" none="bg-fixed bg-cover" style={style}>
-        {/* <img src={src} className="max-w-4xl mx-auto" alt="" /> */}
-      </div>
-    </div>
+    <div className="bg-paralax max-w-4xl" style={style}></div>
   )
+    // <div className="max-w-4xl mx-auto" style={{ position: 'relative' }}>
+    //   <div className="max-w-4xl mx-auto bg-fixed" none="bg-fixed bg-cover" style={style}>
+    //     {/* <img src={src} className="max-w-4xl mx-auto" alt="" /> */}
+    //   </div>
+    // </div>
 }
 
 
 function IndexPage() {
   return (
     <Layout>
-      <SEO
-        title="Home"
-      />
+      <SEO />
       <FancyLogo />
       <section className="text-center">
         <HeroImg />

@@ -11,17 +11,44 @@ import BookNow from "./Booknow";
 import Kids from "../components/kids"
 import Contact from "../components/contact"
 import Map from '../components/map'
+import FancyLogo from "../components/FancyLogo";
+
+
+
+function HeroImg() {
+  const src = "/images/gallery/IMG_0612.jpg"
+  const height = "30rem"
+  // const style = {
+  //   backgroundImage: src,
+  //   height
+  // }
+  const style = { 
+    position: 'relative',
+    height: "25rem", 
+    background: `url(${src}) 50% fixed / cover`,
+    // backgroundAttachment: 'fixed',
+    // backgroundSize: 'cover', 
+    backgroundPosition: `center center`,   
+  }
+  return (
+    <div className="max-w-4xl mx-auto" style={{position:'relative'}}>
+      <div className="max-w-4xl mx-auto bg-fixed" none="bg-fixed bg-cover" style={style}>
+        {/* <img src={src} className="max-w-4xl mx-auto" alt="" /> */}
+      </div>
+    </div>
+  )
+}
+
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
         title="Home"
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
-
+      <FancyLogo />
       <section className="text-center">
-        <img src="/images/gallery/IMG_0612.jpg" alt=""/>
+        <HeroImg />
         <p className="italic mb-3">
           {"Situated in central Oudtshoorn, Rosa B&B offers unmatched comfort and tranquility. We have something for everyone here. Relax next to the swimming pool after enjoying a hearty South African breakfast. In the winter get cosy in front of the fireplace with one of our hundreds of books."}
         </p>
@@ -37,7 +64,7 @@ function IndexPage() {
         <Kids />
         <Contact />
         <Map />
-        
+
 
         {/* <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
           Hey there! Welcome to your first Gatsby site.
@@ -54,7 +81,7 @@ function IndexPage() {
           , a utility-first CSS framework.
         </p> */}
       </section>
-    </Layout>
+    </Layout >
   );
 }
 

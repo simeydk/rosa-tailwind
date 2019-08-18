@@ -1,4 +1,5 @@
 import React from "react";
+import {ParallaxProvider, ParallaxBanner} from 'react-scroll-parallax';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -19,24 +20,19 @@ import Intro from "../components/Intro";
 function HeroImg() {
   // const src = "https://res.cloudinary.com/simeydk/image/upload/v1566145069/Rosabnb/IMG_0612.jpg"
   const src = "https://res.cloudinary.com/simeydk/image/upload/c_crop,f_auto,h_1880,w_3840,x_0,y_0/v1566145069/Rosabnb/IMG_0612.jpg"
-  const height = "30rem"
-  // const style = {
-  //   backgroundImage: src,
-  //   height
-  // }
   const style = {
-    position: 'relative',
     height: "28rem",
     maxHeight: "35vw",
-    background: `url(${src})`,
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover',
-    backgroundPosition: `center center`,
-    marginLeft: `auto`,
-    marginRight: `auto`,
   }
+
+  const layers = [{image: src, amount:0.3}]
+
   return (
-    <div className="bg-paralax max-w-5xl" style={style}></div>
+    <ParallaxProvider>
+      <div className="mx-auto max-w-5xl inset-shadow">
+        <ParallaxBanner layers={layers} style={style} />
+      </div>
+    </ParallaxProvider>
   )
 }
 

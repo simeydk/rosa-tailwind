@@ -85,9 +85,10 @@
 }
 
 .bg-paralax {
-   /* max-width: 1028px; */
    background-attachment: fixed;
    background-position: center;
-   /* border: 1px solid #999; */
+}
+
+.inset-shadow {
    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2), inset -1px -1px 6px rgba(0,0,0,0.2);
 }

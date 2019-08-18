@@ -12,11 +12,12 @@ import Kids from "../components/kids"
 import Contact from "../components/contact"
 import Map from '../components/map'
 import FancyLogo from "../components/FancyLogo";
+import Intro from "../components/Intro";
 
 
 
 function HeroImg() {
-  const src = "/images/gallery/IMG_0612.jpg"
+  const src = "https://res.cloudinary.com/simeydk/image/upload/v1566145069/Rosabnb/IMG_0612.jpg"
   const height = "30rem"
   // const style = {
   //   backgroundImage: src,
@@ -27,21 +28,15 @@ function HeroImg() {
     height: "28rem",
     background: `url(${src})`,
     backgroundAttachment: 'fixed',
-    backgroundSize: "80%", 
+    backgroundSize: "80%",
     backgroundPosition: `center top`,
     marginLeft: `auto`,
     marginRight: `auto`,
   }
   return (
-    <div className="bg-paralax max-w-4xl" style={style}></div>
+    <div className="bg-paralax max-w-5xl" style={style}></div>
   )
-    // <div className="max-w-4xl mx-auto" style={{ position: 'relative' }}>
-    //   <div className="max-w-4xl mx-auto bg-fixed" none="bg-fixed bg-cover" style={style}>
-    //     {/* <img src={src} className="max-w-4xl mx-auto" alt="" /> */}
-    //   </div>
-    // </div>
 }
-
 
 function IndexPage() {
   return (
@@ -50,12 +45,7 @@ function IndexPage() {
       <FancyLogo />
       <section className="text-center">
         <HeroImg />
-        <p className="italic mb-3">
-          {"Situated in central Oudtshoorn, Rosa B&B offers unmatched comfort and tranquility. We have something for everyone here. Relax next to the swimming pool after enjoying a hearty South African breakfast. In the winter get cosy in front of the fireplace with one of our hundreds of books."}
-        </p>
-        <p className="italic mb-3">
-          {"Every room boasts free WiFi, television, aircon and/or a heater."}
-        </p>
+        <Intro />
         <Testimonials />
         <BookNow />
         <Amenities />

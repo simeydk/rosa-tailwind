@@ -21,14 +21,15 @@ function HeroImg() {
   const src = "https://res.cloudinary.com/simeydk/image/upload/c_crop,f_auto,h_1880,w_3840,x_0,y_0/v1566145069/Rosabnb/IMG_0612.jpg"
   const style = {
     height: "28rem",
-    maxHeight: "35vw",
+    maxHeight: "70vw",
+    boxShadow: "inset 3px 2px black",
   }
   const layers = [{ image: src, amount: 0.3 }]
 
   return (
     <div className="mx-auto max-w-5xl inset-shadow">
       <ParallaxBanner layers={layers} style={style}>
-        <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+        <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center inset-shadow">
         </div>
       </ParallaxBanner>
     </div>

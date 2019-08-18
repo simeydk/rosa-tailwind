@@ -92,3 +92,7 @@
 .inset-shadow {
    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2), inset -1px -1px 6px rgba(0,0,0,0.2);
 }
+
+.outer-shadow {
+   box-shadow: 3px 3px 6px rgba(0,0,0,0.2), -1px -1px 6px rgba(0,0,0,0.2);
+}

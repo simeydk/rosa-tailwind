@@ -1,5 +1,6 @@
 import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
+import { Carousel } from 'react-responsive-carousel'
 
 export default Testimonials
 
@@ -21,10 +22,10 @@ const data = [
     },
 ]
 
-function Testimonial({ text, author, source }) {
-    return <div>
-        <h1 className="text-lg">“{text}”</h1>
-        <p> - {author}, {source}</p>
+function Testimonial({ text, author, source, key }) {
+    return <div index={key || 0} className="font-light leading-loose">
+        <blockquote className="text-lg italic text-gray-800">“{text}”</blockquote>
+        <p className="text-gray-600"> - {author}, {source}</p>
         <p></p>
     </div>
 }
@@ -33,14 +34,14 @@ function TestimonalBlock({ children }) {
     const src = "https://res.cloudinary.com/simeydk/image/upload/v1566145346/Rosabnb/IMG_0424.jpg"
     const style = {
         height: "28rem",
-        maxHeight: "35vw",
+        maxHeight: "75vw",
     }
     const layers = [{ image: src, amount: 0.3 }]
 
     return (
         <div className="mx-auto max-w-5xl inset-shadow">
             <ParallaxBanner layers={layers} style={style}>
-                <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+                <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center inset-shadow">
                     {children}
                 </div>
             </ParallaxBanner>
@@ -49,10 +50,13 @@ function TestimonalBlock({ children }) {
 }
 
 function Testimonials() {
+    const entries =  data.slice(0,1).map(props => <Testimonial {...props} />)
     return (
         <TestimonalBlock>
-            <div className="bg-white max-w-sm px-10 py-6 m-20">
-                {data.map(props => <Testimonial {...props} />)}
+            <div className="bg-white max-w-sm px-10 py-6 md:m-20 outer-shadow">
+                {/* <Carousel> */}
+                    {entries}
+                {/* </Carousel> */}
             </div>
         </TestimonalBlock>
     )

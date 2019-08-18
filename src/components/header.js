@@ -9,8 +9,8 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <nav className="bg-black relative">
-      <div className="flex flex-wrap items-spread justify-between max-w-4xl mx-auto p-2 md:p-4">
+    <nav className="bg-gray-900 relative">
+      <div className="flex flex-wrap items-spread justify-between max-w-4xl mx-auto px-2 py-4 md:p-6">
 
         <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
@@ -31,8 +31,8 @@ function Header({ siteTitle }) {
             isExpanded ? `block` : `hidden`
             } md:block flex md:items-center w-full justify-between`}
         >
-          <div className="text-sm uppercase font-bold">
-            <NavItem label="Home" href="/" />
+          <div className="text-sm uppercase" style={{fontWeight: 500}}>
+            <NavItem label="Home" href="/" style={{color: "#555"}}/>
             <NavItem label="About" href="/#about" />
             <NavItem label="Rooms" href="/#rooms" />
             <NavItem label="Services" href="/#services" />
@@ -47,11 +47,12 @@ function Header({ siteTitle }) {
   );
 }
 
-function NavItem({ label, href, className }) {
+function NavItem({ label, href, className, style }) {
   return (
     <Link
       to={href}
-      className={"block md:inline-block mt-4 mr-6 md:mt-0 no-underline text-white " + className}
+      className={"block md:inline-block mt-4 mr-8 md:mt-0 no-underline text-white " + className}
+      style={style}
     >
       {label}
     </Link>

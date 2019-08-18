@@ -62,8 +62,24 @@
  */
 
 
- @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500&display=swap');
 
  * {
     font-family: 'Montserrat', sans-serif;
  }
+
+ .serif {
+    font-family: Georgia, serif;
+ }
+
+ .with-lines:before, .with-lines:after {
+   content: "";
+   display: inline-block;
+   width: 3rem;
+   margin: 0 .5em 0 -55%;
+   vertical-align: middle;
+   border-bottom: 1px solid #aaa;
+}
+.with-lines:after {
+   margin: 0 -55% 0 .5em;
+}

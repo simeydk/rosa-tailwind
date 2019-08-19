@@ -1,12 +1,6 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
-  faCog,
-  faSpinner,
-  faQuoteLeft,
-  faSquare,
-  faCheckSquare,
   faCoffee,
   faWheelchair,
   faSwimmer,
@@ -28,7 +22,6 @@ library.add(
   faWifi,
   faAward,
 ) 
-const element = <FontAwesomeIcon icon={faCoffee} />
 
 export default Amenities
 

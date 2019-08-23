@@ -1,4 +1,5 @@
 import React from 'react';
+import H2 from './utilities/H2'
 
 export default Awards
 
@@ -10,9 +11,9 @@ const logos = [
 
 function Awards() {
     return <section>
-        <h2 className="text-2xl mt-5">Awards</h2>
-        <div className="flex align-items-center">
-        {logos.map(src => <img src={src} alt="award" style={{width:"50px"}}/>)}
+        <H2 id="awards">Awards</H2>
+        <div className="flex align-items-center w-100 justify-center">
+        {logos.map(src => <img src={src} alt="award" className ="w-24 m-8"/>)}
         </div>
     </section>
 }

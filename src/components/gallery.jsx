@@ -1,4 +1,5 @@
 import React from 'react';
+import H2 from './utilities/H2'
 
 export default Gallery
 
@@ -18,7 +19,7 @@ const style = {
 
 function Gallery() {
     return <section className="my-8" >
-        <h2 className="text-2xl" id="gallery">Gallery</h2>
+        <H2  id="gallery">Gallery</H2>
         <div className="flex flex-wrap">
             {data.map(src => <img src={src} alt="" style={style}/>)}
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import H2 from './utilities/H2'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCoffee,
@@ -71,9 +72,9 @@ function Amenity({ title, description, icon }) {
 function Amenities() {
     return (
         <section>
-            <h2 id="rooms" className="text-4xl my-16 uppercase">
+            <H2 id="rooms">
                 Our services
-            </h2>
+            </H2>
             <div className="flex flex-row flex-wrap max-w-4xl mx-auto">
               {data.map(props => <Amenity {...props} />)}
             </div>

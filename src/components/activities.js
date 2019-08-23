@@ -1,5 +1,5 @@
 import React from 'react';
-
+import H2 from './utilities/H2'
 export default Activities
 
 
@@ -46,9 +46,9 @@ function Activity({ title, description, icon }) {
 function Activities() {
   return (
     <section>
-      <h2 id="rooms" className="text-4xl my-16 uppercase">
+      <H2 id="rooms">
         Things to do
-      </h2>
+      </H2>
       <div className="flex flex-row flex-wrap max-w-4xl mx-auto">
         {data.map(props => <Activity {...props} />)}
       </div>

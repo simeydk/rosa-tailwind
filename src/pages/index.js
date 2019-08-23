@@ -8,7 +8,7 @@ import Amenities from "../components/amenities"
 import Gallery from "../components/gallery"
 import Activities from "../components/activities"
 import Awards from "../components/awards"
-import BookNow from "./Booknow";
+import BookNow from "../components/Booknow";
 import Kids from "../components/kids"
 import Contact from "../components/contact"
 import Map from '../components/map'

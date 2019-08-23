@@ -33,7 +33,7 @@ function Testimonial({ text, author, source, key }) {
 function TestimonalBlock({ children }) {
     const src = "https://res.cloudinary.com/simeydk/image/upload/v1566145346/Rosabnb/IMG_0424.jpg"
     const style = {
-        height: "28rem",
+        // height: "28rem",
         maxHeight: "75vw",
     }
     const layers = [{ image: src, amount: 0.3 }]
@@ -53,7 +53,7 @@ function Testimonials() {
     const entries =  data.slice(0,1).map(props => <Testimonial {...props} />)
     return (
         <TestimonalBlock>
-            <div className="bg-white max-w-sm px-10 py-6 md:m-20 outer-shadow">
+            <div className="bg-white max-w-sm m-4 p-4 md:px-10 md:py-6  md:m-20 outer-shadow">
                 {/* <Carousel> */}
                     {entries}
                 {/* </Carousel> */}

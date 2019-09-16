@@ -1,6 +1,6 @@
 import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { Carousel } from 'react-responsive-carousel'
+import Carousel from './Carousel'
 
 export default Testimonials
 
@@ -50,14 +50,12 @@ function TestimonalBlock({ children }) {
 }
 
 function Testimonials() {
-    const entries =  data.slice(0,1).map(props => <Testimonial {...props} />)
+    const entries = data.map(props => <Testimonial {...props} />)
     return (
         <TestimonalBlock>
-            <div className="bg-white max-w-sm m-4 p-4 md:px-10 md:py-6  md:m-20 outer-shadow">
-                {/* <Carousel> */}
+                <Carousel className="bg-white w-full max-w-lg m-4 p-4 md:px-10 md:py-6  md:m-20 outer-shadow">
                     {entries}
-                {/* </Carousel> */}
-            </div>
+                </Carousel>
         </TestimonalBlock>
     )
 }

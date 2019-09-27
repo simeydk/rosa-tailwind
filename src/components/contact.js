@@ -9,7 +9,7 @@ function Contact() {
     return (
         <section className="p-4 pb-10 bg-gray-300" id="contact">
             <H2>Contact us</H2>
-            <p>{"info@rosabnb.co.za"}<span className="text-gray-500">{" / "}</span>10 Vrede St, Oudtshoorn, 6620<span className="text-gray-500">{" / "}</span>+27 (0) 65 962 2762"}</p>
+            <p>{"info@rosabnb.co.za"}<span className="text-gray-500">{" / "}</span>10 Vrede St, Oudtshoorn, 6620<span className="text-gray-500">{" / "}</span>+27 (0) 65 962 2762</p>
             <NetlifyForm className="max-w-2xl mx-auto">
                 <div className="flex md:flex-row flex-col">
                     <input type="text" placeholder="name" name="name" className="border p-2 flex-grow m-2" />

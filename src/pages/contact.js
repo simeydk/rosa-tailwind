@@ -11,7 +11,7 @@ function ContactPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
       />
       <section>
-        <form className="mx-auto md:w-1/2">
+        <form className="mx-auto md:w-1/2" name="test" netlify>
           <p className="leading-loose mb-8">
             Here is an example of a form built using Tailwind. More form
             examples are available{" "}

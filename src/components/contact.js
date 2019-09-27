@@ -9,16 +9,16 @@ function NetlifyForm({children}) {
         name="contact" 
         method="POST" 
         data-netlify="true" 
-        data-netlify-recaptcha="true"
-        data-netlify-honeypot="bot-field"
+        // data-netlify-recaptcha="true"
+        // data-netlify-honeypot="bot-field"
         >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
+        {/* <p hidden>
         <label>
             Don’t fill this out: <input name="bot-field" onChange={handleChange} />
         </label>
-        </p>
+        </p> */}
         {children}
         </form>
     )
@@ -33,16 +33,16 @@ function Contact() {
                 name="contact" 
                 method="POST" 
                 data-netlify="true" 
-                data-netlify-recaptcha="true"
-                data-netlify-honeypot="bot-field"
+                // data-netlify-recaptcha="true"
+                // data-netlify-honeypot="bot-field"
                 >
                                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
+                {/* <p hidden>
                 <label>
                     Don’t fill this out: <input name="bot-field" />
                 </label>
-                </p>
+                </p> */}
                 <input type="text" placeholder="name" name="Name" className="border" />
                 <input type="email" placeholder="email" name="Email" className="border" />
                 <input type="text" placeholder="Subject" name="Subject" className="border" />

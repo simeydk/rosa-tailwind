@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, DotGroup, Dot } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 export default function Carousel({children, className}) {
@@ -18,7 +18,6 @@ export default function Carousel({children, className}) {
             <div>
                 {children.map((child,i) => <Dot slide={i} className="w-3 h-3 m-3 bg-gray-300 hover:bg-gray-600 disabled:bg-red-500 rounded-full"/>)}
             </div>
-            <DotGroup></DotGroup>
             {/* <ButtonBack>Back</ButtonBack>
             <ButtonNext>Next</ButtonNext> */}
         </CarouselProvider>

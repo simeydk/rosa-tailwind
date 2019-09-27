@@ -5,7 +5,7 @@ export default Map
 function Map() {
     return (
         <section 
-            className="mt-4 bg-blue-500" 
+            className="bg-blue-500" 
             // style={{position:"relative", width:"100vw", left:0, background:"red"}}
             >
             <div className="w-100 h-100 bg-black-500">

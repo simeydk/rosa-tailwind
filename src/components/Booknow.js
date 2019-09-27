@@ -30,7 +30,13 @@ export default function BookNow() {
                     <div className="font-light leading-loose text-lg italic text-gray-800">
                         <p>We have a range of rooms, sleeping parties of two to families of four. Every room has access to its own private bathroom, including three en-suite. Our rooms range from R455 per person.</p>
                     </div>
-                    <button className="text-lg my-8 border border-black uppercase p-2 hover:text-white hover:bg-black">Book Now</button>
+                    <a 
+                        href="https://www.nightsbridge.co.za/bridge/book?bbid=23656" 
+                        target="_blank"
+                        rel="noopener noreferrer" 
+                        >
+                        <span className="inline-block text-lg my-4 border border-black uppercase p-2 hover:text-white hover:bg-black" >Book Now</span>
+                        </a>
                 </div>
             </BookNowBlock>
         </section>);

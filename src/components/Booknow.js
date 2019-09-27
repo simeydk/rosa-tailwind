@@ -3,7 +3,7 @@ import React from "react";
 import { ParallaxBanner } from 'react-scroll-parallax'
 
 function BookNowBlock({ children }) {
-    const src = "https://static.wixstatic.com/media/84803a_4d41dc1b92b9400c9b38751aa1a67ef0~mv2.jpg/v1/fill/w_1470,h_945,al_c,q_85,usm_0.66_1.00_0.01/84803a_4d41dc1b92b9400c9b38751aa1a67ef0~mv2.webp"
+    const src = "https://res.cloudinary.com/simeydk/image/upload/w_1200,h_1200,c_fit,f_auto,q_auto/Rosabnb/white_bed.jpg"
     const style = {
         height: "32rem",
         // maxHeight: "75vw",

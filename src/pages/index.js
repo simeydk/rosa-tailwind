@@ -19,7 +19,7 @@ import Intro from "../components/Intro";
 
 function HeroImg() {
   // const src = "https://res.cloudinary.com/simeydk/image/upload/c_crop,f_auto,h_1880,w_3840,x_0,y_0/v1566145069/Rosabnb/IMG_0612.jpg"
-  const src = "https://res.cloudinary.com/simeydk/image/upload/c_crop,f_auto/v1566145069/Rosabnb/IMG_0612.jpg"
+  const src = "https://res.cloudinary.com/simeydk/image/upload/w_1200,h_1200,c_fit,f_auto,q_auto/v1566145069/Rosabnb/IMG_0612.jpg"
   const style = {
     height: "28rem",
     maxHeight: "70vw",

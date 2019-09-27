@@ -73,7 +73,7 @@ function KidsBlock({ children }) {
 }
 
 function TestimonalBlock({ children }) {
-    const src = "https://res.cloudinary.com/simeydk/image/upload/v1566145346/Rosabnb/IMG_0424.jpg"
+    const src = "https://res.cloudinary.com/simeydk/image/upload/w_1200,h_1200,c_fit,f_auto,q_auto/Rosabnb/IMG_0424.jpg"
     const style = {
         // height: "28rem",
         maxHeight: "75vw",

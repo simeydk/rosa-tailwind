@@ -1,28 +1,7 @@
 import React from 'react';
 import H2 from './utilities/H2'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faCoffee,
-  faWheelchair,
-  faSwimmer,
-  faCar,
-  faSatellite,
-  faWind,
-  faWifi,
-  faAward,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from './utilities/fontAwesome'
 
-library.add(
-  faCoffee,
-  faWheelchair,
-  faSwimmer,
-  faCar,
-  faSatellite,
-  faWind,
-  faWifi,
-  faAward,
-) 
 
 export default Amenities
 

@@ -11,16 +11,17 @@ function NetlifyForm({children, formName}) {
         method="POST" 
         data-netlify="true" 
         // data-netlify-recaptcha="true"
-        // data-netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
         >
-                        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value={formName} />
-        {/* <p hidden>
-        <label>
-            Don’t fill this out: <input name="bot-field" />
-        </label>
-        </p> */}
-        {children}
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value={formName} />
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <p hidden>
+            <label>
+                Don’t fill this out: <input name="bot-field" />
+            </label>
+            </p>
+            {children}
         </form>
     )
 }

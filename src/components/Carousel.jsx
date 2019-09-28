@@ -6,7 +6,7 @@ export default function Carousel({children, className}) {
     return (
         <CarouselProvider
             naturalSlideWidth={100}
-            naturalSlideHeight={35}
+            naturalSlideHeight={30}
             totalSlides={children.length}
             interval={180}
             // isPlaying={true}

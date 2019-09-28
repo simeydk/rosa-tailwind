@@ -4,8 +4,37 @@ import React, { useState } from "react";
 
 // import Img from "gatsby-image";
 
-function Header({ siteTitle }) {
+const textAf = {
+  home: "Tuis",
+  about: "Oor Ons",
+  rooms: "Kamers",
+  services: "Dienste",
+  gallery: "Galery",
+  seeAndDo: "Om Te Sien",
+  contact: "Kontak",
+  bookNow: "Bespreek Nou",
+}
+
+const textEn = {
+  home: "Home",
+  about: "About",
+  rooms: "Rooms",
+  services: "Services",
+  gallery: "Gallery",
+  seeAndDo: "See & Do",
+  contact: "Contact",
+  bookNow: "Book Now",
+}
+
+const textDict = {
+  'en': textEn,
+  'af': textAf,
+}
+
+function Header({lang='en' }) {
   const [isExpanded, toggleExpansion] = useState(false);
+
+  const text = textDict[lang]
 
   return (
     <nav className="bg-gray-900 relative">
@@ -31,14 +60,14 @@ function Header({ siteTitle }) {
             } md:block flex md:items-center w-full justify-between`}
         >
           <div className="text-sm uppercase" style={{ fontWeight: 500 }}>
-            <NavItem label="Home" href="/" style={{ color: "#555" }} />
-            <NavItem label="About" href="/#about" />
-            <NavItem label="Rooms" href="/#rooms" />
-            <NavItem label="Services" href="/#services" />
-            <NavItem label="Gallery" href="/#gallery" />
-            <NavItem label="See & Do" href="/#seeDo" />
-            <NavItem label="Contact" href="/#contact" />
-            <NavItem label="Book Now" href="https://www.nightsbridge.co.za/bridge/book?bbid=23656" className="border p-2" external />
+            <NavItem label={text["home"]} href="/" style={{ color: "#555" }} />
+            <NavItem label={text["about"]} href="/#about" />
+            <NavItem label={text["rooms"]} href="/#rooms" />
+            <NavItem label={text["services"]} href="/#services" />
+            <NavItem label={text["gallery"]} href="/#gallery" />
+            <NavItem label={text["seeAndDo"]} href="/#seeDo" />
+            <NavItem label={text["contact"]} href="/#contact" />
+            <NavItem label={text["bookNow"]} href="https://www.nightsbridge.co.za/bridge/book?bbid=23656" className="border p-2" external />
           </div>
         </div>
       </div>
@@ -60,15 +89,15 @@ function NavItem({ label, href, className, style, external }) {
       </a>
     )
   } else {
-      return (
-        <Link
-          to={href}
-          className={"block md:inline-block mt-4 mr-8 md:mt-0 no-underline text-white " + className}
-          style={style}
-        >
-          {label}
-        </Link>
-      )
+    return (
+      <Link
+        to={href}
+        className={"block md:inline-block mt-4 mr-8 md:mt-0 no-underline text-white " + className}
+        style={style}
+      >
+        {label}
+      </Link>
+    )
   }
 }
 

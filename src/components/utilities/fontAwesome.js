@@ -9,8 +9,6 @@ import {
   faWifi,
   faAward,
   faPaperPlane,
-  faChevronCircleRight,
-  faChevronCircleLeft,
   faChevronRight,
   faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons'
@@ -26,8 +24,6 @@ library.add(
   faWifi,
   faAward,
   faPaperPlane,
-  faChevronCircleLeft,
-  faChevronCircleRight,
   faChevronLeft,
   faChevronRight,
 ) 

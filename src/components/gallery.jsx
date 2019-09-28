@@ -1,11 +1,8 @@
 import React from 'react';
 import {
   ButtonBack,
-  ButtonFirst,
-  ButtonLast,
   ButtonNext,
   CarouselProvider,
-  DotGroup,
   Dot,
   Slide,
   Slider,
@@ -37,7 +34,7 @@ const data = [
 ]
 
 function Gallery() {
-    return <section className="mx-auto max-w-5xl" >
+    return <section id="gallery" className="mx-auto max-w-5xl" >
     <CarouselProvider
     visibleSlides={1}
     totalSlides={data.length}

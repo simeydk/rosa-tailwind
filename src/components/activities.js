@@ -45,8 +45,8 @@ function Activity({ title, description, icon }) {
 
 function Activities() {
   return (
-    <section>
-      <H2 id="rooms">
+    <section id="seeDo">
+      <H2>
         Things to do
       </H2>
       <div className="flex flex-row flex-wrap max-w-4xl mx-auto">

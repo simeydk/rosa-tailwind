@@ -50,8 +50,8 @@ function Amenity({ title, description, icon }) {
 
 function Amenities() {
     return (
-        <section>
-            <H2 id="rooms">
+        <section id="services">
+            <H2>
                 Our services
             </H2>
             <div className="flex flex-row flex-wrap max-w-4xl mx-auto">

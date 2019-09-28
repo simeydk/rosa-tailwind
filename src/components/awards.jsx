@@ -12,7 +12,7 @@ const logos = [
 function Awards() {
     return <section>
         <H2 id="awards">Awards</H2>
-        <div className="flex align-items-center w-100 justify-center">
+        <div className="flex flex-wrap align-items-center w-100 justify-center">
         {logos.map(src => <img src={src} alt="award" className ="w-24 m-8"/>)}
         </div>
     </section>

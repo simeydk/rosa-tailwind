@@ -96,3 +96,34 @@
 .outer-shadow {
    box-shadow: 3px 3px 6px rgba(0,0,0,0.2), -1px -1px 6px rgba(0,0,0,0.2);
 }
+
+.gallery-dot {
+   /* border: 2px solid hotpink; */
+}
+
+.gallery-dot:disabled .gallery-thumb {
+   outline:1px solid rgba(55,55,55,0.9);
+   filter: opacity(0.5);
+   /* box-shadow: inset 0 0 10px rgba(255,255,255,0.2) 2px 2px 5px rgba(0,0,0,0.2); */
+   box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.1);
+}
+
+.slider-container {
+   position: relative;
+ }
+ 
+ .button-back {
+   /* position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%); */
+ }
+ 
+ .button-next {
+   /* position: absolute;
+   top: 0;
+   bottom:0;
+   right: 0;
+   background: hotpink; */
+   /* transform: translateY(-50%); */
+ }

@@ -31,6 +31,14 @@ const textDict = {
   'af': textAf,
 }
 
+function LangButton({lang='en'}) {
+  const label = (lang === 'en' ? 'af' : 'en')
+  const href = (lang === 'en' ? '/afrikaans' : '/')
+  return (
+    <NavItem label={label} href={href} className="border p-2 bg-green-900 fixed top-0 left-0"/>
+  )
+}
+
 function Header({lang='en' }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
@@ -68,6 +76,7 @@ function Header({lang='en' }) {
             <NavItem label={text["seeAndDo"]} href="/#seeDo" />
             <NavItem label={text["contact"]} href="/#contact" />
             <NavItem label={text["bookNow"]} href="https://www.nightsbridge.co.za/bridge/book?bbid=23656" className="border p-2" external />
+            <LangButton lang={lang} />
           </div>
         </div>
       </div>

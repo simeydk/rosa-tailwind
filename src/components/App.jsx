@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 
 import Layout from "./layout";
@@ -16,6 +16,12 @@ import FancyLogo from "./FancyLogo";
 import Intro from "./Intro";
 
 
+function useKeyDown(fn) {
+  useEffect(() => {
+    document.addEventListener('keydown',fn)
+    return () => document.removeEventListener('keydown',fn)
+  })
+}
 
 function HeroImg() {
   // const src = "https://res.cloudinary.com/simeydk/image/upload/c_crop,f_auto,h_1880,w_3840,x_0,y_0/v1566145069/Rosabnb/IMG_0612.jpg"
@@ -37,7 +43,20 @@ function HeroImg() {
   )
 }
 
-function IndexPage({lang = 'en'}) {
+function IndexPage({lang:propsLang = 'en'}) {
+  const [lang, setLang] = useState(propsLang)
+
+  function toggleLang() {
+    setLang(lang==='en' ? 'af' : 'en')
+  }
+
+  useKeyDown((kEvent) => {
+    console.log({key: kEvent.key, event: kEvent} )
+    if(kEvent.shiftKey & kEvent.ctrlKey & kEvent.key === 'L') {
+      toggleLang()
+    }
+  })
+
   return (
     <ParallaxProvider>
       <Layout lang={lang} >

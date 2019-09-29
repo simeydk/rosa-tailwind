@@ -32,10 +32,10 @@ const textDict = {
 }
 
 function LangButton({lang='en'}) {
-  const label = (lang === 'en' ? 'af' : 'en')
+  const label = (lang === 'en' ? 'AF' : 'EN')
   const href = (lang === 'en' ? '/afrikaans' : '/')
   return (
-    <NavItem label={label} href={href} className="border p-2 bg-green-900 fixed top-0 left-0"/>
+    <NavItem label={label} href={href} className="border p-2"/>
   )
 }
 
@@ -46,7 +46,10 @@ function Header({lang='en' }) {
 
   return (
     <nav className="bg-gray-900 relative">
-      <div className="flex flex-wrap items-spread justify-between max-w-4xl mx-auto px-2 py-4 md:p-6">
+      <div 
+        className="flex flex-wrap items-spread justify-between max-w-5xl mx-auto px-2 py-4 md:p-6 text-sm uppercase"
+        style={{fontWeight:'500'}}
+      >
 
         <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
@@ -63,11 +66,9 @@ function Header({lang='en' }) {
         </button>
 
         <div
-          className={`${
-            isExpanded ? `block` : `hidden`
-            } md:block flex md:items-center w-full justify-between`}
+          className={`${isExpanded ? `` : `hidden`} md:flex block md:items-center justify-between`}
         >
-          <div className="text-sm uppercase" style={{ fontWeight: 500 }}>
+          {/* <div style={{ fontWeight: 500 }}> */}
             <NavItem label={text["home"]} href="/" style={{ color: "#555" }} />
             <NavItem label={text["about"]} href="/#about" />
             <NavItem label={text["rooms"]} href="/#rooms" />
@@ -75,9 +76,11 @@ function Header({lang='en' }) {
             <NavItem label={text["gallery"]} href="/#gallery" />
             <NavItem label={text["seeAndDo"]} href="/#seeDo" />
             <NavItem label={text["contact"]} href="/#contact" />
+          {/* </div> */}
+        </div>
+        <div className="flex">
             <NavItem label={text["bookNow"]} href="https://www.nightsbridge.co.za/bridge/book?bbid=23656" className="border p-2" external />
             <LangButton lang={lang} />
-          </div>
         </div>
       </div>
     </nav>

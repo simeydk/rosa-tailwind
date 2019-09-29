@@ -11,7 +11,6 @@ const logos = [
 ].map(({src, en, af}) => ({src: `https://res.cloudinary.com/simeydk/image/upload/w_120,c_scale,f_auto/Rosabnb/partner_logos/${src}`, en, af}))
 
 function Awards({lang = 'en'}) {
-<<<<<<< HEAD
     
     const title = lang === 'en' ? 'Awards' : 'Toekennings'
 
@@ -19,12 +18,6 @@ function Awards({lang = 'en'}) {
         <H2>{title}</H2>
         <div className="flex flex-wrap align-items-center w-100 justify-center">
         {logos.map(logo => <img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="w-24 m-8"/>)}
-=======
-    return <section>
-        <H2 id="awards">Awards</H2>
-        <div className="flex align-middle justify-center">
-        {logos.map(logo => <div className=""><img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="m-8"/></div>)}
->>>>>>> master
         </div>
     </section>
 }

@@ -27,7 +27,7 @@ library.add(
 
 export default Kids
 
-const data = [
+const textEn = [
 
     { description: "Babies and toddlers are welcome. We can provide cots, toys and privacy" },
 
@@ -35,6 +35,13 @@ const data = [
 
 ]
 
+const textAf = [
+
+    { description: "Ouers met babas en kleuters kan gerus wees. Ons verskaf bababedjies speelgoed en privaatheid." },
+
+    { description: "Families met kinders is welkom, en ons het 'n groot verskeidenheid kinderboeke om te lees" },
+
+]
 
 
 function Kid({ description, key }) {
@@ -44,11 +51,12 @@ function Kid({ description, key }) {
     </div>
 }
 
-function Kids() {
+function Kids({lang = 'en'}) {
+    const text = lang === 'en' ? textEn : textAf
     return (
         <KidsBlock>
             <div className="bg-white max-w-sm m-4 p-4 md:px-10 md:py-6  md:m-20 outer-shadow">
-                {data.slice(0, 1).map(props => <Kid {...props} />)}
+                {text.slice(0, 1).map(props => <Kid {...props} />)}
             </div>
         </KidsBlock>
     )

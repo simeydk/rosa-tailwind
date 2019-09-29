@@ -8,9 +8,10 @@ const logos = [
     {src: "holiday_check.png", en: "Recommended on HolidayCheck", af: "Aanbeveel op HolidayCheck"},
     {src: "afristay.jpg", en: "Afristay Traveller's Choice award", af: "Afristay Reisiger se Keuse toekenning"},
     {src: "aa_quality_assured.jpg", en: "AA Quality Assured Highly recommended", af: "AA Quality Assured hoogs aanbeveel"},
-].map(({src, en, af}) => ({src: `https://res.cloudinary.com/simeydk/image/upload/Rosabnb/partner_logos/${src}`, en, af}))
+].map(({src, en, af}) => ({src: `https://res.cloudinary.com/simeydk/image/upload/w_120,c_scale,f_auto/Rosabnb/partner_logos/${src}`, en, af}))
 
 function Awards({lang = 'en'}) {
+<<<<<<< HEAD
     
     const title = lang === 'en' ? 'Awards' : 'Toekennings'
 
@@ -18,6 +19,12 @@ function Awards({lang = 'en'}) {
         <H2>{title}</H2>
         <div className="flex flex-wrap align-items-center w-100 justify-center">
         {logos.map(logo => <img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="w-24 m-8"/>)}
+=======
+    return <section>
+        <H2 id="awards">Awards</H2>
+        <div className="flex align-middle justify-center">
+        {logos.map(logo => <div className=""><img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="m-8"/></div>)}
+>>>>>>> master
         </div>
     </section>
 }

@@ -4,26 +4,45 @@ import {FontAwesomeIcon} from './utilities/fontAwesome'
 
 export default Contact
 
+const en = {
+    title: 'Contact us',
+    name: 'Name',
+    email: 'email',
+    subject: 'Subject',
+    message: 'enter message here',
+    send: 'Send Message',
+}
 
-function Contact() {
+const af = {
+    title: 'Kontak ons',
+    name: 'Naam',
+    email: 'epos adres',
+    subject: 'Titel',
+    message: 'Tik boodskap hier',
+    send: 'Stuur Boodskap',
+}
+
+
+function Contact({lang = 'en'}) {
+    const {title, name, email, subject, message, send} = lang === 'en' ? en : af 
     return (
         <section className="p-4 pb-10 bg-gray-300" id="contact">
-            <H2>Contact us</H2>
+            <H2>{title}</H2>
             <p>{"info@rosabnb.co.za"}<span className="text-gray-500">{" / "}</span>10 Vrede St, Oudtshoorn, 6620<span className="text-gray-500">{" / "}</span>+27 (0) 65 962 2762</p>
             <NetlifyForm className="max-w-2xl mx-auto">
                 <div className="flex md:flex-row flex-col">
-                    <input type="text" placeholder="name" name="name" className="border p-2 flex-grow m-2" />
-                    <input type="email" placeholder="email" name="email" className="border p-2 flex-grow m-2" />
+                    <input type="text" placeholder={name} name="name" className="border p-2 flex-grow m-2" />
+                    <input type="email" placeholder={email} name="email" className="border p-2 flex-grow m-2" />
                 </div>
                 <div className="flex">
-                    <input type="text" placeholder="subject" name="subject" className="text-xl border p-2 flex-grow m-2" />
+                    <input type="text" placeholder={subject} name="subject" className="text-xl border p-2 flex-grow m-2" />
                 </div>
                 <div className="flex">
-                    <textarea name="message" className="border p-2 flex-grow m-2" rows="4" />
+                    <textarea name="message" placeholder={message} className="border p-2 flex-grow m-2" rows="4" />
                 </div>
                 <button type="submit"  className="bg-gray-600 text-white py-2 px-4 text-xl hover:bg-gray-800 focus:bg-gray-700">
                     <FontAwesomeIcon icon="paper-plane" className="text-white mr-2 pr-1" />
-                    Send Message
+                    {send}
                 </button>
             </NetlifyForm>
         </section>

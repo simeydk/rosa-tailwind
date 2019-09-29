@@ -33,7 +33,8 @@ const data = [
     // "images/gallery/IMG_0612.JPG",
 ]
 
-function Gallery() {
+function Gallery({lang = 'en'}) {
+    const title = lang === 'en' ? 'Gallery' : 'Galery'
     return <section id="gallery" className="mx-auto max-w-5xl" >
     <CarouselProvider
     visibleSlides={1}
@@ -42,7 +43,7 @@ function Gallery() {
     naturalSlideHeight={200}
     isPlaying
   >
-    <H2>Gallery</H2>
+    <H2>{title}</H2>
     <div className="relative">
         <Slider>
             {data.map((url,i) => (

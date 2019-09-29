@@ -69,7 +69,7 @@ function IndexPage({lang:propsLang = 'en'}) {
           <BookNow lang={lang} />
           <Amenities lang={lang} />
           <Gallery lang={lang} />
-          <Awards />
+          <Awards lang={lang} />
           <Activities lang={lang} />
           <Kids lang={lang} />
           <Contact lang={lang} />

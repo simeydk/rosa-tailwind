@@ -15,7 +15,7 @@ const data = [
         },
         af: {
             title: "Ontbyt",
-            description: "Breakfast is included with all our rooms. Ontbyt word altyd ingesluit. Geniet smullekker kos met 'n plaaslike gier.",
+            description: "Ontbyt word altyd ingesluit. Geniet smullekker kos met 'n plaaslike gier.",
         },
     },
 
@@ -27,7 +27,7 @@ const data = [
         },
         af: {
             title: "Swembad & Tuin",
-            description: "Geniet ons pragtige tuin of koel lekker af in ons groot swembad",
+            description: "Geniet ons pragtige tuin of koel lekker af in ons groot swembad. Twee van ons kamers het ook privaat balkonne",
         },
     },
     {
@@ -79,8 +79,8 @@ const data = [
 function Amenity({ en, af, icon, lang }) {
     const {title, description} = lang === 'en' ? en : af 
     return <div className="w-full md:w-1/2 lg:w-1/3 p-6 mb-6">
-        <FontAwesomeIcon icon={icon} size="2x" color="#718096" />
-        <h3 className="text-xl my-2">{title}</h3>
+        <FontAwesomeIcon icon={icon} size="2x" className="text-gray-500" />
+        <h3 className="text my-2">{title}</h3>
         <p className="font-light leading-loose text-sm italic text-gray-600">{description}</p>
     </div>
 }

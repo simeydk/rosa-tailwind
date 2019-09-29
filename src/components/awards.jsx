@@ -17,7 +17,7 @@ function Awards({lang = 'en'}) {
     return <section id="awards">
         <H2>{title}</H2>
         <div className="flex flex-wrap align-items-center w-100 justify-center">
-        {logos.map(logo => <img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="w-24 m-8"/>)}
+        {logos.map(logo => <div><img src={logo.src} alt={lang === 'en' ? logo.en : logo.af} className ="w-24 m-8"/></div>)}
         </div>
     </section>
 }

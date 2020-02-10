@@ -70,12 +70,12 @@ function Header({lang='en' }) {
         >
           {/* <div style={{ fontWeight: 500 }}> */}
             <NavItem label={text["home"]} href="/" style={{ color: "#555" }} />
-            <NavItem label={text["about"]} href="/#about" />
-            <NavItem label={text["rooms"]} href="/#rooms" />
-            <NavItem label={text["services"]} href="/#services" />
-            <NavItem label={text["gallery"]} href="/#gallery" />
-            <NavItem label={text["seeAndDo"]} href="/#seeDo" />
-            <NavItem label={text["contact"]} href="/#contact" />
+            <NavItem label={text["about"]} href="#about" />
+            <NavItem label={text["rooms"]} href="#rooms" />
+            <NavItem label={text["services"]} href="#services" />
+            <NavItem label={text["gallery"]} href="#gallery" />
+            <NavItem label={text["seeAndDo"]} href="#seeDo" />
+            <NavItem label={text["contact"]} href="#contact" />
           {/* </div> */}
         </div>
         <div className="flex">
